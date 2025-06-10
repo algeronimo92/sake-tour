@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SakeTour</string>
+
+    <string name="list_screen_title">Sake Shops</string>
+
+    <string name="detail_screen_title">Sake Shops</string>
+    <string name="detail_screen_view_website_button">Visit Website</string>
+</resources>
