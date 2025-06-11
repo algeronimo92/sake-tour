@@ -36,10 +36,9 @@ fun StarRating(
     }
 }
 
-
 @Preview
 @Composable
-fun PreviewStarRating() {
+internal fun PreviewStarRating() {
     SakeTourTheme {
         StarRating(4.5f, Modifier, 5)
     }

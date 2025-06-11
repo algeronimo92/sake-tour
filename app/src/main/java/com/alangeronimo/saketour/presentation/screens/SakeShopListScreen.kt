@@ -1,13 +1,22 @@
 package com.alangeronimo.saketour.presentation.screens
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import com.alangeronimo.designsystem.components.MyCircularProgressBar
+import com.alangeronimo.designsystem.components.MyToolbar
 import com.alangeronimo.designsystem.components.SakeListItem
+import com.alangeronimo.designsystem.ui.theme.SakeTourTheme
 import com.alangeronimo.domain.model.SakeShop
 import com.alangeronimo.saketour.presentation.viewmodel.SakeShopViewModel
 
@@ -16,16 +25,52 @@ fun SakeShopListScreen(
     viewModel: SakeShopViewModel,
     onItemClick: (SakeShop) -> Unit
 ) {
+    SakeTourTheme {
+        Scaffold(
+            topBar = { ShowToolbar() },
+        ) { paddingValues ->
+            Content(viewModel, onItemClick, paddingValues)
+        }
+    }
+}
+
+@Composable
+fun Content(
+    viewModel: SakeShopViewModel,
+    onItemClick: (SakeShop) -> Unit,
+    paddingValues: PaddingValues
+) {
     val state by viewModel.state.collectAsState()
-    when {
-        state.isLoading -> CircularProgressIndicator()
-        state.error != null -> Text("Error: ${state.error}")
-        else -> LazyColumn {
-            items(state.sakeShops) { shop ->
-                ListItem(shop = shop, onClick = { onItemClick(shop) })
+    Box(
+        Modifier
+            .fillMaxSize()
+            .padding(paddingValues)
+    ) {
+        when {
+            state.isLoading -> Box(Modifier.fillMaxSize()) {
+                MyCircularProgressBar(modifier = Modifier.align(Alignment.Center))
+            }
+
+            state.error != null -> Box(Modifier.fillMaxSize()) {
+                Text("Error: ${state.error}", modifier = Modifier.align(Alignment.Center))
+            }
+
+            else -> LazyColumn {
+                items(state.sakeShops) { shop ->
+                    ListItem(shop = shop, onClick = { onItemClick(shop) })
+                }
             }
         }
     }
+}
+
+@Composable
+fun ShowToolbar() {
+    MyToolbar(
+        title = "Sake Shops",
+        hasBackIcon = false,
+        onBackClick = {},
+    )
 }
 
 @Composable

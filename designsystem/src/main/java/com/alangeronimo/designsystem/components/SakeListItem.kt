@@ -30,11 +30,11 @@ fun SakeListItem(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(modifier = Modifier.weight(1f)) {
-                Text(text = shop.name, style = MaterialTheme.typography.titleMedium)
-                Text(text = shop.address, style = MaterialTheme.typography.bodyMedium, color = TextSecondary)
+                Text(text = shop.name, style = MaterialTheme.typography.titleSmall)
+                Text(text = shop.address, style = MaterialTheme.typography.bodySmall, color = TextSecondary)
             }
             StarRating(shop.rating, Modifier.padding(PaddingValues(0.dp, 0.dp, Dimens.PaddingSmall, 0.dp)), 5)
-            Text(text = String.format("%.1f", shop.rating), style = MaterialTheme.typography.bodyMedium)
+            Text(text = String.format("%.1f", shop.rating), style = MaterialTheme.typography.titleMedium)
         }
         HorizontalDivider(thickness = Dimens.DividerHeight)
     }
@@ -42,7 +42,7 @@ fun SakeListItem(
 
 @Preview(showBackground = true)
 @Composable
-fun SakeListItemPreview() {
+internal fun SakeListItemPreview() {
     val sampleShop = SakeShop(
         name = "The Sake House",
         description = "Fine Japanese sake",
