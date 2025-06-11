@@ -27,7 +27,13 @@ fun SakeShopListScreen(
 ) {
     SakeTourTheme {
         Scaffold(
-            topBar = { ShowToolbar() },
+            topBar = {
+                MyToolbar(
+                    title = "Sake Shops",
+                    hasBackIcon = false,
+                    onBackClick = {},
+                )
+            },
         ) { paddingValues ->
             Content(viewModel, onItemClick, paddingValues)
         }
@@ -35,7 +41,7 @@ fun SakeShopListScreen(
 }
 
 @Composable
-fun Content(
+private fun Content(
     viewModel: SakeShopViewModel,
     onItemClick: (SakeShop) -> Unit,
     paddingValues: PaddingValues
@@ -62,15 +68,6 @@ fun Content(
             }
         }
     }
-}
-
-@Composable
-fun ShowToolbar() {
-    MyToolbar(
-        title = "Sake Shops",
-        hasBackIcon = false,
-        onBackClick = {},
-    )
 }
 
 @Composable

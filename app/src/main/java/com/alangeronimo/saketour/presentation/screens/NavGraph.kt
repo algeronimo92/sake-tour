@@ -26,7 +26,7 @@ fun NavGraph(
         ) { backStackEntry ->
             val name = backStackEntry.arguments?.getString("name") ?: ""
             val shop = viewModel.findShopByName(name)
-            shop?.let { SakeShopDetailScreen(it) }
+            shop?.let { SakeShopDetailScreen(it) { navController.popBackStack() } }
         }
     }
 }
