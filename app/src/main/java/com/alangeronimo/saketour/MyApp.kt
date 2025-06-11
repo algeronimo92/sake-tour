@@ -1,9 +1,8 @@
 package com.alangeronimo.saketour
 
 import android.app.Application
-import com.alangeronimo.saketour.di.dataModule
-import com.alangeronimo.saketour.di.domainModule
-import com.alangeronimo.saketour.di.networkModule
+import com.alangeronimo.data.di.dataModule
+import com.alangeronimo.domain.di.domainModule
 import com.alangeronimo.saketour.di.presentationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -22,7 +21,6 @@ class MyApp: Application() {
             // Load modules
             modules(
                 listOf(
-                    networkModule,
                     dataModule,
                     presentationModule,
                     domainModule,

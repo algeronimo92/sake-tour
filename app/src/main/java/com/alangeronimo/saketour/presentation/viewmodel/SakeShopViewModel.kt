@@ -2,14 +2,14 @@ package com.alangeronimo.saketour.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.alangeronimo.saketour.domain.model.SakeShop
-import com.alangeronimo.saketour.domain.useCase.GetSakeShopsUseCase
+import com.alangeronimo.domain.model.SakeShop
+import com.alangeronimo.domain.useCase.GetSakeShopsUseCase
 import com.alangeronimo.saketour.presentation.state.SakeUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class SakeShopViewModel(private val getSakeShopsUseCase: GetSakeShopsUseCase) : ViewModel() {
+class SakeShopViewModel(private val getSakeShopsUseCase: com.alangeronimo.domain.useCase.GetSakeShopsUseCase) : ViewModel() {
 
     private val _state = MutableStateFlow(SakeUiState())
     val state: StateFlow<SakeUiState> = _state
@@ -30,7 +30,7 @@ class SakeShopViewModel(private val getSakeShopsUseCase: GetSakeShopsUseCase) : 
         }
     }
 
-    fun findShopByName(name: String): SakeShop? {
+    fun findShopByName(name: String): com.alangeronimo.domain.model.SakeShop? {
         return state.value.sakeShops.find { it.name == name }
     }
 }

@@ -17,10 +17,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
-import com.alangeronimo.saketour.domain.model.SakeShop
+import com.alangeronimo.domain.model.SakeShop
 
 @Composable
-fun SakeShopDetailScreen(shop: SakeShop) {
+fun SakeShopDetailScreen(shop: com.alangeronimo.domain.model.SakeShop) {
     val context = LocalContext.current
     Column(
         modifier = Modifier

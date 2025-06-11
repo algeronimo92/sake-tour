@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "SakeTour"
 include(":app")
+include(":domain")
+include(":data")
