@@ -33,4 +33,9 @@ dependencies {
     //koin
     implementation(project.dependencies.platform(libs.koin.bom))
     implementation(libs.koin.core)
+    //test
+    testImplementation(kotlin("test"))
+    testImplementation(libs.junit)
+    testImplementation(libs.junit.junit)
+    testImplementation(libs.kotlinx.coroutines.core)
 }

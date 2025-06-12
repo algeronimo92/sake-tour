@@ -27,6 +27,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    sourceSets["main"].assets.srcDirs("src/main/assets")
 }
 
 dependencies {
@@ -37,4 +38,9 @@ dependencies {
     //koin
     implementation(project.dependencies.platform(libs.koin.bom))
     implementation(libs.koin.core)
+    //test
+    testImplementation(kotlin("test"))
+    testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.mockito.core)
 }

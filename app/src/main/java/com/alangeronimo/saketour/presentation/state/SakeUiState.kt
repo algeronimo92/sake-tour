@@ -4,6 +4,6 @@ import com.alangeronimo.domain.model.SakeShop
 
 data class SakeUiState(
     val isLoading: Boolean = false,
-    val sakeShops: List<com.alangeronimo.domain.model.SakeShop> = emptyList(),
+    val sakeShops: List<SakeShop> = emptyList(),
     val error: String? = null
 )

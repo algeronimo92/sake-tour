@@ -66,7 +66,8 @@ fun ShowSakeListItem(modifier: Modifier = Modifier) {
     SakeTourTheme {
         SakeListItem(
             shop = sampleShop,
-            onClick = {}
+            onClick = {},
+            modifier = modifier
         )
     }
 }

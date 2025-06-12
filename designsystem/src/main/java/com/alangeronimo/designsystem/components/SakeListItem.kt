@@ -1,8 +1,8 @@
 package com.alangeronimo.designsystem.components
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.material3.Divider
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -16,6 +16,7 @@ import com.alangeronimo.designsystem.ui.theme.SakeTourTheme
 import com.alangeronimo.designsystem.ui.theme.TextSecondary
 import com.alangeronimo.domain.model.SakeShop
 
+@SuppressLint("DefaultLocale")
 @Composable
 fun SakeListItem(
     shop: SakeShop,
