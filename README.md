@@ -26,7 +26,7 @@ You can explore the initial UI mockup on Figma here:
 
 | Shop List | Shop Detail |
 |-----------|-------------|
-| ![List Screenshot](screenshots/shop_list.png) | ![Detail Screenshot](screenshots/shop_detail.png) |
+| ![List Screenshot]([screenshots/shop_list.png](https://github.com/user-attachments/assets/d0272a1c-c7b9-4eaa-bc95-9f11ebf96ff4)) | ![Detail Screenshot]([screenshots/shop_detail.png](https://github.com/user-attachments/assets/120fadc2-21f8-47a8-b771-9d929381c428)) |
 
 ---
 
