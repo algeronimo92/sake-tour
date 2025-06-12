@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f4b6506f-1dbd-48ad-b434-9e20549f5ec1" width="150" alt="App Icon"/>
+</p>
+
 # 🗺️ SakeTour — Explore the Best Sake Shops in Japan 🇯🇵🍶
 
 SakeTour is a modern Android app built with Jetpack Compose, MVVM, and Clean Architecture.  
