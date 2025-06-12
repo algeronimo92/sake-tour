@@ -14,9 +14,6 @@
       <SelectionState runConfigName="designsystem">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="fallback_json_is_loaded_when_api_fails()">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
     </selectionStates>
   </component>
 </project>

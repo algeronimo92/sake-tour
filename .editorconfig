@@ -1,2 +1,7 @@
+root = true
+
 [app/src/main/java/**/presentation/**/*.kt]
+ktlint_standard_function-naming = disabled
+
+[designsystem/src/main/java/**/**/*.kt]
 ktlint_standard_function-naming = disabled
