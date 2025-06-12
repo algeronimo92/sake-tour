@@ -19,7 +19,8 @@ import com.alangeronimo.designsystem.components.SakeListItem
 import com.alangeronimo.designsystem.ui.theme.SakeTourTheme
 import com.alangeronimo.domain.model.SakeShop
 import com.alangeronimo.saketour.presentation.viewmodel.ISakeShopViewModel
-import com.alangeronimo.saketour.presentation.viewmodel.SakeShopViewModel
+import androidx.compose.ui.res.stringResource
+import com.alangeronimo.saketour.R
 
 @Composable
 fun SakeShopListScreen(
@@ -30,7 +31,7 @@ fun SakeShopListScreen(
         Scaffold(
             topBar = {
                 MyToolbar(
-                    title = "Sake Shops",
+                    title = stringResource(id = R.string.list_screen_title),
                     hasBackIcon = false,
                     onBackClick = {},
                 )

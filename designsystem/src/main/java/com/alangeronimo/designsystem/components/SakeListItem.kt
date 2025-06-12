@@ -49,7 +49,7 @@ internal fun SakeListItemPreview() {
         description = "Fine Japanese sake",
         picture = null,
         rating = 4.2f,
-        address = "123 Main St, Anytown",
+        address = "123 Main St, Any town",
         googleMapsLink = "",
         website = ""
     )

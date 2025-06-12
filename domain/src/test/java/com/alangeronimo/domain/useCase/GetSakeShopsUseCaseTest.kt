@@ -1,8 +1,8 @@
 package com.alangeronimo.domain.useCase
 
-import kotlinx.coroutines.runBlocking
 import com.alangeronimo.domain.model.SakeShop
 import com.alangeronimo.domain.repository.SakeShopRepository
+import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -27,7 +27,7 @@ class GetSakeShopsUseCaseTest {
     }
 
     @Test
-    fun `returns sake shop list`() = runBlocking {
+    fun `returns sake shop list`() = runTest {
         //given
         useCase = GetSakeShopsUseCase(fakeRepository)
         //when

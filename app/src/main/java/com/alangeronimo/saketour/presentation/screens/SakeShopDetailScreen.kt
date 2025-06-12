@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import com.alangeronimo.designsystem.components.AddressRow
@@ -32,7 +33,7 @@ fun SakeShopDetailScreen(shop: SakeShop, onBackClick: () -> Unit) {
         Scaffold(
             topBar = {
                 MyToolbar(
-                    title = "Shop Details",
+                    title = stringResource(id = R.string.detail_screen_title),
                     hasBackIcon = true,
                     onBackClick = onBackClick,
                 )
@@ -99,7 +100,7 @@ fun SakeShopDetailScreen(shop: SakeShop, onBackClick: () -> Unit) {
                 }
 
                 PrimaryTextButton(
-                    "Visit Website",
+                    stringResource(id = R.string.visit_website_button),
                     onClick = {
                         context.startActivity(
                             Intent(

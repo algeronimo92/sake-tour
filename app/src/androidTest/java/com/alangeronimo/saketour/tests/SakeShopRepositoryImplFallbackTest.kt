@@ -10,7 +10,7 @@ import com.alangeronimo.data.repository.SakeShopRepositoryImpl
 import com.alangeronimo.domain.model.SakeShop
 import com.alangeronimo.domain.repository.SakeShopRepository
 import com.google.gson.Gson
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -36,7 +36,7 @@ class SakeShopRepositoryImplFallbackTest {
     }
 
     @Test
-    fun fallback_json_is_loaded_when_api_fails() = runBlocking {
+    fun fallback_json_is_loaded_when_api_fails() = runTest {
         val context: Context = InstrumentationRegistry.getInstrumentation().targetContext
         val api = FakeFailingApi()
         val gson = Gson()

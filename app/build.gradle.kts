@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.android.ktlint)
 }
 
 android {
@@ -84,5 +85,8 @@ dependencies {
     androidTestImplementation(libs.androidx.navigation.testing)
     androidTestImplementation(libs.mockk.android)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    testImplementation(libs.turbine)
+    testImplementation(libs.kotlinx.coroutines.test)
 
 }

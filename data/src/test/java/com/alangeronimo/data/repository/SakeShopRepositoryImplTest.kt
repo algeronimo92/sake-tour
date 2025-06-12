@@ -7,7 +7,7 @@ import com.alangeronimo.data.dto.SakeShopDto
 import com.alangeronimo.data.network.SakeShopApi
 import com.alangeronimo.domain.model.SakeShop
 import com.google.gson.Gson
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mockito.Mockito
@@ -21,7 +21,7 @@ class SakeShopRepositoryImplTest {
 
     private fun getMockContext(): Context {
         val dummyJson =
-            """[{"name":"Sake1","description":"desc","picture":null,"rating":4.6,"address":"addr","google_maps_link":"www.googlemaps.com","website":"www.website.com"}]"""
+            """[{"name":"Sake1","description":"desc","picture":null,"rating":4.6,"address":"my_address","google_maps_link":"www.google_maps.com","website":"www.website.com"}]"""
         val mockContext = Mockito.mock(Context::class.java)
         val mockAssetManager = Mockito.mock(AssetManager::class.java)
         `when`(mockContext.assets).thenReturn(mockAssetManager)
@@ -39,7 +39,7 @@ class SakeShopRepositoryImplTest {
     }
 
     @Test
-    fun `returns backup data when api fails`() = runBlocking {
+    fun `returns backup data when api fails`() = runTest {
         //given
         repository = SakeShopRepositoryImpl(
             api = object : SakeShopApi {
@@ -57,7 +57,7 @@ class SakeShopRepositoryImplTest {
 
 
     @Test
-    fun `throws when backup JSON is invalid`() = runBlocking {
+    fun `throws when backup JSON is invalid`() = runTest {
         //given
         val logger = FakeLogger()
         val repo = SakeShopRepositoryImpl(

@@ -5,10 +5,10 @@ kotlin = "2.0.21"
 # Jetpack Compose
 composeBom = "2025.06.00"
 activityCompose = "1.10.1"
-material = "1.12.0"
 
 # Jetpack Core + Lifecycle
 coreKtx = "1.16.0"
+kotlinxCoroutinesCoreVersion = "1.8.1"
 lifecycleRuntimeKtx = "2.9.1"
 
 # Navigation
@@ -29,9 +29,9 @@ coilCompose = "2.5.0"
 gsonVersion = "2.10.1"
 retrofit = "2.11.0"
 accompanistSystemUiControllerVersion = "0.30.1"
-kotlinxCoroutinesCoreVersion = "1.8.1"
 mockitoCoreVersion = "5.11.0"
-
+turbineVersion = "1.1.0"
+ktlintversion = "11.6.0"
 ###
 
 [libraries]
@@ -57,6 +57,8 @@ androidx-navigation-testing = { module = "androidx.navigation:navigation-testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitExt" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCoreVersion" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbineVersion" }
 ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
 ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTestVersion" }
@@ -80,6 +82,6 @@ google-accompanist-systemuicontroller = { module = "com.google.accompanist:accom
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+android-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlintversion" }

@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.android.ktlint)
 }
 
 android {
@@ -36,4 +37,5 @@ dependencies {
     //test
     testImplementation(kotlin("test"))
     testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
 }

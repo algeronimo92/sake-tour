@@ -4,5 +4,5 @@
     <string name="list_screen_title">Sake Shops</string>
 
     <string name="detail_screen_title">Sake Shops</string>
-    <string name="detail_screen_view_website_button">Visit Website</string>
+    <string name="visit_website_button">Visit Website</string>
 </resources>
