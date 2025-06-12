@@ -106,7 +106,7 @@ git clone https://github.com/yourusername/SakeTour.git
 **Alan Gerónimo**  
 Senior Android Developer — Kotlin | Compose | Clean Architecture  
 📍 Trujillo, Peru  
-🔗 [LinkedIn](https://www.linkedin.com/in/alangeronimo) · [GitHub](https://github.com/alangeronimo)
+🔗 [LinkedIn](https://www.linkedin.com/in/alan-ger%C3%B3nimo-sanes) · [GitHub](https://github.com/algeronimo92)
 
 ---
 
