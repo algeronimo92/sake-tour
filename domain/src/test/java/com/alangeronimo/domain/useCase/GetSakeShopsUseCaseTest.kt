@@ -4,7 +4,6 @@ import kotlinx.coroutines.runBlocking
 import com.alangeronimo.domain.model.SakeShop
 import com.alangeronimo.domain.repository.SakeShopRepository
 import org.junit.Assert.assertEquals
-import org.junit.Before
 import org.junit.Test
 
 class GetSakeShopsUseCaseTest {
@@ -27,15 +26,10 @@ class GetSakeShopsUseCaseTest {
         }
     }
 
-    @Before
-    fun setup() {
-        useCase = GetSakeShopsUseCase(fakeRepository)
-    }
-
     @Test
     fun `returns sake shop list`() = runBlocking {
         //given
-
+        useCase = GetSakeShopsUseCase(fakeRepository)
         //when
         val result = useCase()
         //then
