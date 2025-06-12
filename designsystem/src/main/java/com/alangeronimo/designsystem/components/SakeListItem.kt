@@ -21,14 +21,15 @@ import com.alangeronimo.domain.model.SakeShop
 fun SakeListItem(
     shop: SakeShop,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Column(modifier = modifier.clickable(onClick = onClick)) {
         Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = Dimens.PaddingMedium, vertical = Dimens.PaddingSmall),
-            verticalAlignment = Alignment.CenterVertically
+            modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = Dimens.PaddingMedium, vertical = Dimens.PaddingSmall),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(text = shop.name, style = MaterialTheme.typography.titleSmall)
@@ -44,21 +45,21 @@ fun SakeListItem(
 @Preview(showBackground = true)
 @Composable
 internal fun SakeListItemPreview() {
-    val sampleShop = SakeShop(
-        name = "The Sake House",
-        description = "Fine Japanese sake",
-        picture = null,
-        rating = 4.2f,
-        address = "123 Main St, Any town",
-        googleMapsLink = "",
-        website = ""
-    )
+    val sampleShop =
+        SakeShop(
+            name = "The Sake House",
+            description = "Fine Japanese sake",
+            picture = null,
+            rating = 4.2f,
+            address = "123 Main St, Any town",
+            googleMapsLink = "",
+            website = "",
+        )
 
     SakeTourTheme {
         SakeListItem(
             shop = sampleShop,
-            onClick = {}
+            onClick = {},
         )
     }
 }
-

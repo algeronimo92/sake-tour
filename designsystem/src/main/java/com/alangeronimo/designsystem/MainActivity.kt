@@ -26,15 +26,16 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-val sampleShop = SakeShop(
-    name = "The Sake House",
-    description = "Fine Japanese sake",
-    picture = null,
-    rating = 4.2f,
-    address = "123 Main St, Anytown",
-    googleMapsLink = "",
-    website = ""
-)
+val sampleShop =
+    SakeShop(
+        name = "The Sake House",
+        description = "Fine Japanese sake",
+        picture = null,
+        rating = 4.2f,
+        address = "123 Main St, Anytown",
+        googleMapsLink = "",
+        website = "",
+    )
 
 @Composable
 fun InitView() {
@@ -43,7 +44,7 @@ fun InitView() {
             Column {
                 Greeting(
                     name = "SakeListItem",
-                    modifier = Modifier.padding(innerPadding)
+                    modifier = Modifier.padding(innerPadding),
                 )
                 ShowSakeListItem()
                 ShowSakeListItem()
@@ -54,10 +55,13 @@ fun InitView() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(
+    name: String,
+    modifier: Modifier = Modifier,
+) {
     Text(
         text = "This is $name",
-        modifier = modifier
+        modifier = modifier,
     )
 }
 
@@ -67,7 +71,7 @@ fun ShowSakeListItem(modifier: Modifier = Modifier) {
         SakeListItem(
             shop = sampleShop,
             onClick = {},
-            modifier = modifier
+            modifier = modifier,
         )
     }
 }

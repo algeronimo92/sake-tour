@@ -21,7 +21,7 @@ import com.alangeronimo.designsystem.ui.theme.SakeTourTheme
 fun MyToolbar(
     title: String,
     hasBackIcon: Boolean = true,
-    onBackClick: () -> Unit
+    onBackClick: () -> Unit,
 ) {
     CenterAlignedTopAppBar(
         title = {
@@ -29,11 +29,11 @@ fun MyToolbar(
         },
         modifier = Modifier.shadow(4.dp),
         navigationIcon = {
-            if(hasBackIcon) {
+            if (hasBackIcon) {
                 IconButton(onClick = onBackClick) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                        contentDescription = "Back"
+                        contentDescription = "Back",
                     )
                 }
             }
@@ -48,7 +48,7 @@ internal fun ToolBarPreview() {
     SakeTourTheme {
         MyToolbar(
             title = title,
-            onBackClick = {}
+            onBackClick = {},
         )
     }
 }

@@ -7,5 +7,5 @@ data class SakeShop(
     val rating: Float,
     val address: String,
     val googleMapsLink: String,
-    val website: String
+    val website: String,
 )

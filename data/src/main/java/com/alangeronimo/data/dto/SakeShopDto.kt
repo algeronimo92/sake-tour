@@ -9,5 +9,5 @@ data class SakeShopDto(
     val rating: Float,
     val address: String,
     @SerializedName("google_maps_link") val googleMapsLink: String,
-    val website: String
+    val website: String,
 )

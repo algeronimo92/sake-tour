@@ -27,29 +27,31 @@ import com.alangeronimo.designsystem.ui.theme.Dimens
 fun AddressRow(
     address: String,
     modifier: Modifier = Modifier,
-    onClick: () -> Unit = {}
+    onClick: () -> Unit = {},
 ) {
     Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .clickable { onClick() }
-            .padding(horizontal = Dimens.PaddingMedium, vertical = Dimens.PaddingSmall),
-        verticalAlignment = Alignment.CenterVertically
+        modifier =
+            modifier
+                .fillMaxWidth()
+                .clickable { onClick() }
+                .padding(horizontal = Dimens.PaddingMedium, vertical = Dimens.PaddingSmall),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         Box(
-            modifier = Modifier
-                .size(32.dp)
-                .background(
-                    color = Color(0xFFF0EAEA),
-                    shape = RoundedCornerShape(Dimens.CardCornerRadius)
-                ),
-            contentAlignment = Alignment.Center
+            modifier =
+                Modifier
+                    .size(32.dp)
+                    .background(
+                        color = Color(0xFFF0EAEA),
+                        shape = RoundedCornerShape(Dimens.CardCornerRadius),
+                    ),
+            contentAlignment = Alignment.Center,
         ) {
             Icon(
                 imageVector = Icons.Default.LocationOn,
                 contentDescription = "Location",
                 tint = Color(0xFF4A3B39),
-                modifier = Modifier.size(18.dp)
+                modifier = Modifier.size(18.dp),
             )
         }
 
@@ -60,7 +62,7 @@ fun AddressRow(
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             color = Color(0xFF4A3B39),
-            modifier = Modifier.weight(1f)
+            modifier = Modifier.weight(1f),
         )
 
         Spacer(modifier = Modifier.width(12.dp))
@@ -68,7 +70,7 @@ fun AddressRow(
         Icon(
             imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
             contentDescription = "Go",
-            tint = Color(0xFF4A3B39)
+            tint = Color(0xFF4A3B39),
         )
     }
 }

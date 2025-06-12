@@ -16,7 +16,6 @@ import java.io.ByteArrayInputStream
 import kotlin.test.assertTrue
 
 class SakeShopRepositoryImplTest {
-
     private lateinit var repository: SakeShopRepositoryImpl
 
     private fun getMockContext(): Context {
@@ -30,46 +29,61 @@ class SakeShopRepositoryImplTest {
         return mockContext
     }
 
-
     private class FakeLogger : MyLogger {
         val logs = mutableListOf<String>()
-        override fun logError(tag: String, message: String, throwable: Throwable?) {
+
+        override fun logError(
+            tag: String,
+            message: String,
+            throwable: Throwable?,
+        ) {
             logs.add("[$tag] $message")
         }
     }
 
     @Test
-    fun `returns backup data when api fails`() = runTest {
-        //given
-        repository = SakeShopRepositoryImpl(
-            api = object : SakeShopApi {
-                override suspend fun getSakeShops(): List<SakeShopDto> {
-                    throw Exception("Simulated API failure")
-                }
-            }, context = getMockContext(), gson = Gson(), logger = FakeLogger()
-        )
-        //when
-        val result: List<SakeShop> = repository.getSakeShops()
-        //then
-        assertEquals(1, result.size)
-        assertEquals("Sake1", result[0].name)
-    }
-
+    fun `returns backup data when api fails`() =
+        runTest {
+            // given
+            repository =
+                SakeShopRepositoryImpl(
+                    api =
+                        object : SakeShopApi {
+                            override suspend fun getSakeShops(): List<SakeShopDto> {
+                                throw Exception("Simulated API failure")
+                            }
+                        },
+                    context = getMockContext(),
+                    gson = Gson(),
+                    logger = FakeLogger(),
+                )
+            // when
+            val result: List<SakeShop> = repository.getSakeShops()
+            // then
+            assertEquals(1, result.size)
+            assertEquals("Sake1", result[0].name)
+        }
 
     @Test
-    fun `throws when backup JSON is invalid`() = runTest {
-        //given
-        val logger = FakeLogger()
-        val repo = SakeShopRepositoryImpl(
-            api = object : SakeShopApi {
-                override suspend fun getSakeShops(): List<SakeShopDto> {
-                    throw RuntimeException("Simulated failure")
-                }
-            }, context = getMockContext(), gson = Gson(), logger = logger
-        )
-        //when
-        repo.getSakeShops()
-        //then
-        assertTrue(logger.logs.any { it.contains("Loading fallback") })
-    }
+    fun `throws when backup JSON is invalid`() =
+        runTest {
+            // given
+            val logger = FakeLogger()
+            val repo =
+                SakeShopRepositoryImpl(
+                    api =
+                        object : SakeShopApi {
+                            override suspend fun getSakeShops(): List<SakeShopDto> {
+                                throw RuntimeException("Simulated failure")
+                            }
+                        },
+                    context = getMockContext(),
+                    gson = Gson(),
+                    logger = logger,
+                )
+            // when
+            repo.getSakeShops()
+            // then
+            assertTrue(logger.logs.any { it.contains("Loading fallback") })
+        }
 }

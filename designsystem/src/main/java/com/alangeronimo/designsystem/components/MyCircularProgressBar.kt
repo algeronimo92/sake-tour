@@ -11,6 +11,6 @@ import com.alangeronimo.designsystem.ui.theme.Accent
 fun MyCircularProgressBar(modifier: Modifier = Modifier) {
     CircularProgressIndicator(
         color = Accent,
-        modifier = modifier
+        modifier = modifier,
     )
 }

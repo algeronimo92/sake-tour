@@ -14,20 +14,24 @@ import com.alangeronimo.designsystem.ui.theme.Dimens
 import com.alangeronimo.designsystem.ui.theme.SakeTourTheme
 
 @Composable
-fun PrimaryTextButton(text: String, onClick: () -> Unit, modifier: Modifier) {
-
+fun PrimaryTextButton(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier,
+) {
     TextButton(
         onClick = onClick,
         modifier = modifier,
-        colors = ButtonDefaults.textButtonColors(
-            containerColor = Accent,
-            contentColor = MaterialTheme.colorScheme.onPrimary
-        )
+        colors =
+            ButtonDefaults.textButtonColors(
+                containerColor = Accent,
+                contentColor = MaterialTheme.colorScheme.onPrimary,
+            ),
     ) {
         Text(
             text = text,
             style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier.padding(horizontal = Dimens.PaddingMedium, vertical = 0.dp)
+            modifier = Modifier.padding(horizontal = Dimens.PaddingMedium, vertical = 0.dp),
         )
     }
 }
@@ -38,5 +42,4 @@ internal fun PreviewPrimaryTextButton() {
     SakeTourTheme {
         PrimaryTextButton(text = "Primary Text Button", onClick = {}, modifier = Modifier)
     }
-
 }

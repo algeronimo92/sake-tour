@@ -6,5 +6,6 @@ import kotlinx.coroutines.flow.StateFlow
 
 interface ISakeShopViewModel {
     val state: StateFlow<SakeUiState>
+
     fun findShopByName(name: String): SakeShop?
 }

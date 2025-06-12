@@ -7,13 +7,12 @@ import com.alangeronimo.data.dto.SakeShopDto
 import com.alangeronimo.data.utils.readBackupJson
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import org.junit.Assert.*
+import junit.framework.TestCase.assertNotNull
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class AssetsReadTest {
-
     private val gson = Gson()
 
     @Test

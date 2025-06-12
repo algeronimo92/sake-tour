@@ -12,7 +12,7 @@ import com.alangeronimo.saketour.presentation.viewmodel.ISakeShopViewModel
 @Composable
 fun NavHostGenerator(
     navController: NavHostController,
-    viewModel: ISakeShopViewModel
+    viewModel: ISakeShopViewModel,
 ) {
     NavHost(navController = navController, startDestination = "list") {
         composable("list") {
@@ -22,7 +22,7 @@ fun NavHostGenerator(
         }
         composable(
             "detail/{name}",
-            arguments = listOf(navArgument("name") { type = NavType.StringType })
+            arguments = listOf(navArgument("name") { type = NavType.StringType }),
         ) { backStackEntry ->
             val name = backStackEntry.arguments?.getString("name") ?: ""
             val shop = viewModel.findShopByName(name)

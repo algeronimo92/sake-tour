@@ -15,7 +15,7 @@ import com.alangeronimo.designsystem.ui.theme.SakeTourTheme
 fun StarRating(
     rating: Float,
     modifier: Modifier = Modifier,
-    maxRating: Int = 5
+    maxRating: Int = 5,
 ) {
     Row(modifier = modifier) {
         for (i in 1..maxRating) {
@@ -23,13 +23,13 @@ fun StarRating(
                 Icon(
                     imageVector = Icons.Filled.Star,
                     contentDescription = null,
-                    tint = Accent
+                    tint = Accent,
                 )
             } else {
                 Icon(
                     imageVector = Icons.Outlined.Star,
                     contentDescription = null,
-                    tint = Accent.copy(alpha = 0.3f)
+                    tint = Accent.copy(alpha = 0.3f),
                 )
             }
         }

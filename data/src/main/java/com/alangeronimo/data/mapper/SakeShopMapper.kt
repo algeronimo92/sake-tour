@@ -11,6 +11,6 @@ fun SakeShopDto.toDomain(): SakeShop {
         rating = rating,
         address = address,
         googleMapsLink = googleMapsLink,
-        website = website
+        website = website,
     )
 }

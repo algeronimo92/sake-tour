@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.android.ktlint)
 }
 
 android {
@@ -16,7 +17,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -30,10 +31,10 @@ android {
 }
 
 dependencies {
-    //koin
+    // koin
     implementation(project.dependencies.platform(libs.koin.bom))
     implementation(libs.koin.core)
-    //test
+    // test
     testImplementation(kotlin("test"))
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)

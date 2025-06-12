@@ -18,35 +18,36 @@ import coil.compose.rememberAsyncImagePainter
 @Composable
 fun ShopImageLoader(
     imageUrl: String?,
-    @DrawableRes placeholder:  Int,
-    @DrawableRes errorImage:  Int,
+    @DrawableRes placeholder: Int,
+    @DrawableRes errorImage: Int,
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    contentScale: ContentScale = ContentScale.FillWidth
+    contentScale: ContentScale = ContentScale.FillWidth,
 ) {
-    val painter = rememberAsyncImagePainter(
-        model = imageUrl,
-        placeholder = painterResource(id = placeholder),
-        error = painterResource(id = errorImage),
-        contentScale = contentScale
-    )
+    val painter =
+        rememberAsyncImagePainter(
+            model = imageUrl,
+            placeholder = painterResource(id = placeholder),
+            error = painterResource(id = errorImage),
+            contentScale = contentScale,
+        )
 
     val state = painter.state
 
     Box(
         modifier = modifier,
-        contentAlignment = Alignment.Center
+        contentAlignment = Alignment.Center,
     ) {
         Image(
             painter = painter,
             contentDescription = contentDescription,
             modifier = Modifier.fillMaxSize(),
-            contentScale = contentScale
+            contentScale = contentScale,
         )
 
         if (state is AsyncImagePainter.State.Loading) {
-            CircularProgressIndicator(
-                modifier = Modifier.size(32.dp)
+            MyCircularProgressBar(
+                modifier = Modifier.size(32.dp),
             )
         }
     }

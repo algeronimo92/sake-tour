@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class SakeShopViewModel(private val getSakeShopsUseCase: GetSakeShopsUseCase) : ViewModel(), ISakeShopViewModel {
-
     private val _state = MutableStateFlow(SakeUiState())
     override val state: StateFlow<SakeUiState> = _state
 
