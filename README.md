@@ -17,6 +17,11 @@ It helps travelers discover and explore top-rated sake shops across Japan, from 
 
 ---
 
+## 🖌️ Initial Design (Figma)
+
+You can explore the initial UI mockup on Figma here:  
+👉 [Figma Design](https://www.figma.com/design/xzyPG1Na6C7dpVEDEr9Rso/Untitled?node-id=0-1&t=s37gBnlOXjYBLeS5-1)
+
 ## 📸 Preview
 
 | Shop List | Shop Detail |

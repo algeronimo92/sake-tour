@@ -8,6 +8,7 @@ import com.alangeronimo.data.utils.readBackupJson
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import junit.framework.TestCase.assertNotNull
+import junit.framework.TestCase.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
 

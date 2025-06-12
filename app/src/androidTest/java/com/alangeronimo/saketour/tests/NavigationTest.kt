@@ -45,6 +45,9 @@ class NavigationTest {
 
     @Test
     fun verify_NavigateToDetailScreenAndShowRightShopInfo() {
+        composeTestRule
+            .onNodeWithText("Sake Shops")
+            .assertIsDisplayed()
         composeTestRule.onNodeWithText("Sakura Sake")
             .performClick()
 
