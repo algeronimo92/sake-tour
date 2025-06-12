@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.material3.Surface
 import androidx.navigation.compose.rememberNavController
 import com.alangeronimo.designsystem.ui.theme.SakeTourTheme
-import com.alangeronimo.saketour.presentation.screens.NavGraph
+import com.alangeronimo.saketour.presentation.screens.NavHostGenerator
 import com.alangeronimo.saketour.presentation.viewmodel.SakeShopViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
             SakeTourTheme {
                 Surface {
                     val navController = rememberNavController()
-                    NavGraph(navController = navController, viewModel = viewModel)
+                    NavHostGenerator(navController = navController, viewModel = viewModel)
                 }
             }
         }

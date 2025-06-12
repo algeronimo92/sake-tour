@@ -7,12 +7,12 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.alangeronimo.saketour.presentation.viewmodel.SakeShopViewModel
+import com.alangeronimo.saketour.presentation.viewmodel.ISakeShopViewModel
 
 @Composable
-fun NavGraph(
+fun NavHostGenerator(
     navController: NavHostController,
-    viewModel: SakeShopViewModel
+    viewModel: ISakeShopViewModel
 ) {
     NavHost(navController = navController, startDestination = "list") {
         composable("list") {

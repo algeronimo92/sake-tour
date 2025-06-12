@@ -9,10 +9,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class SakeShopViewModel(private val getSakeShopsUseCase: GetSakeShopsUseCase) : ViewModel() {
+class SakeShopViewModel(private val getSakeShopsUseCase: GetSakeShopsUseCase) : ViewModel(), ISakeShopViewModel {
 
     private val _state = MutableStateFlow(SakeUiState())
-    val state: StateFlow<SakeUiState> = _state
+    override val state: StateFlow<SakeUiState> = _state
 
     init {
         loadSakeShops()
@@ -30,7 +30,7 @@ class SakeShopViewModel(private val getSakeShopsUseCase: GetSakeShopsUseCase) : 
         }
     }
 
-    fun findShopByName(name: String): SakeShop? {
+    override fun findShopByName(name: String): SakeShop? {
         return state.value.sakeShops.find { it.name == name }
     }
 }

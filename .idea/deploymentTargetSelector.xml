@@ -20,6 +20,12 @@
       <SelectionState runConfigName="reads_and_parses_sake_shops_backup_json_successfully()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="fallback json is loaded when api fails()">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="fallback_json_is_loaded_when_api_fails()">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>

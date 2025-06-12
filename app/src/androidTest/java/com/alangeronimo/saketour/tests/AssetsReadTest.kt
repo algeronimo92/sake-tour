@@ -1,4 +1,4 @@
-package com.alangeronimo.saketour
+package com.alangeronimo.saketour.tests
 
 import android.content.Context
 import androidx.test.ext.junit.runners.AndroidJUnit4

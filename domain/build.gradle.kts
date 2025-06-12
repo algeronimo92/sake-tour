@@ -36,6 +36,4 @@ dependencies {
     //test
     testImplementation(kotlin("test"))
     testImplementation(libs.junit)
-    testImplementation(libs.junit.junit)
-    testImplementation(libs.kotlinx.coroutines.core)
 }

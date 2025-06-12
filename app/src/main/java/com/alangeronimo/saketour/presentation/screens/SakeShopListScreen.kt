@@ -18,11 +18,12 @@ import com.alangeronimo.designsystem.components.MyToolbar
 import com.alangeronimo.designsystem.components.SakeListItem
 import com.alangeronimo.designsystem.ui.theme.SakeTourTheme
 import com.alangeronimo.domain.model.SakeShop
+import com.alangeronimo.saketour.presentation.viewmodel.ISakeShopViewModel
 import com.alangeronimo.saketour.presentation.viewmodel.SakeShopViewModel
 
 @Composable
 fun SakeShopListScreen(
-    viewModel: SakeShopViewModel,
+    viewModel: ISakeShopViewModel,
     onItemClick: (SakeShop) -> Unit
 ) {
     SakeTourTheme {
@@ -42,7 +43,7 @@ fun SakeShopListScreen(
 
 @Composable
 private fun Content(
-    viewModel: SakeShopViewModel,
+    viewModel: ISakeShopViewModel,
     onItemClick: (SakeShop) -> Unit,
     paddingValues: PaddingValues
 ) {
