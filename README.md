@@ -9,6 +9,23 @@ It helps travelers discover and explore top-rated sake shops across Japan, from 
 
 ---
 
+## 🧠 Solo Scrum-Style Planning
+
+Even though this was a solo project, I followed a simplified Scrum-inspired workflow to stay organized and focused:
+
+- 📋 Created a **product backlog** in ClickUp with all major features and enhancements
+- 🏁 Divided the work into small **sprint-like groups** (e.g., UI setup, navigation, architecture, testing)
+- ✅ Used task status columns (To Do → In Progress → Done) to track progress
+
+Here’s an image showing how I structured the project plan and subtasks:
+
+![Project Planning](https://github.com/user-attachments/assets/8e8a0160-ce11-47ac-86c8-c56547f042b2)
+
+You can also view the full board on ClickUp here:  
+🔗 [ClickUp Board – SakeTour Project](https://app.clickup.com/90131138852/v/li/901314036231)
+
+---
+
 ## ✨ Features
 
 - 📍 Browse curated sake shop listings by rating and location
