@@ -111,6 +111,7 @@ git clone https://github.com/algeronimo92/SakeTour.git
 ```bash
 ./gradlew connectedAndroidTest
 ```
+![image](https://github.com/user-attachments/assets/9395862c-9012-48f6-a29f-1111a427b525)
 
 ---
 
