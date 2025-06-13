@@ -4,7 +4,7 @@
 
 # 🗺️ SakeTour — Explore the Best Sake Shops in Japan🍶
 
-SakeTour is a modern Android app built with Jetpack Compose, MVVM, and Clean Architecture.  
+SakeTour is a modern Android app built with Jetpack Compose, MVI, and Clean Architecture.  
 It helps travelers discover and explore top-rated sake shops across Japan, from Kyoto to Tokyo and beyond.
 
 ---
@@ -85,15 +85,15 @@ You can explore the initial UI mockup on Figma here:
 
 ## ⚙️ Tech Stack
 
-| Layer         | Tech                                      |
-|---------------|-------------------------------------------|
-| UI            | Jetpack Compose, Material3                |
-| DI            | Koin                                      |
-| Networking    | Retrofit + Gson                           |
-| Async         | Kotlin Coroutines                         |
-| Architecture  | MVVM + Clean Architecture (modular)       |
-| Testing       | JUnit5, Turbine, MockK, Coroutine Test    |
-| Code Quality  | ktlint, Lint + `.editorconfig` enforced   |
+| Layer         | Tech                                    |
+|---------------|-----------------------------------------|
+| UI            | Jetpack Compose, Material3              |
+| DI            | Koin                                    |
+| Networking    | Retrofit + Gson                         |
+| Async         | Kotlin Coroutines                       |
+| Architecture  | MVI + Clean Architecture (modular)      |
+| Testing       | JUnit5, Turbine, MockK, Coroutine Test  |
+| Code Quality  | ktlint, Lint + `.editorconfig` enforced |
 
 ---
 
