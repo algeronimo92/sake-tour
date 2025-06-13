@@ -99,7 +99,7 @@ git clone https://github.com/algeronimo92/SakeTour.git
 ```bash
 ./gradlew testDebugUnitTest
 ```
-![image](https://github.com/user-attachments/assets/484c8056-e110-449a-9881-0c2155c6a80d)
+![image](https://github.com/user-attachments/assets/d9092a1b-ab32-45dc-b234-8593995ea06a)
 
 - Run ktlint check:
 ```bash
