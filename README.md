@@ -132,6 +132,60 @@ git clone https://github.com/algeronimo92/SakeTour.git
 
 ---
 
+## 🚀 Future Improvements (If Maintained Long-Term)
+
+If I were to continue developing and maintaining this project over time, these are the next improvements I would prioritize, organized by category:
+
+---
+
+### 🧩 Feature Enhancements
+- 🗺️ **Map-based Navigation**  
+  Integrate a real-time map with clustered sake shop pins and user geolocation support.
+
+- 🧾 **Sake Details & Reviews**  
+  Add product pages with sake descriptions, user ratings, and historical information.
+
+- 🔍 **Search and Filtering**  
+  Allow users to search by region, rating, flavor profile, or shop name.
+
+- 🌐 **Multi-language Support**  
+  Implement English and Japanese localization to serve a broader audience.
+
+---
+
+### 🧪 Quality & Testing
+- 🧪 **Add more Automated UI Tests**  
+  Expand test coverage with end-to-end tests using Jetpack Compose testing APIs.
+
+- 🧱 **Environment Configuration (Fake / QA / Production)**  
+  Set up build variants for QA and Production environments with proper API keys and endpoints.
+
+---
+
+### 📊 Observability & Analytics
+- 📊 **Event Tracking & Analytics**  
+  Add tools like Firebase Analytics or mParticle to monitor feature usage and user behavior.
+
+---
+
+### ♿ Accessibility & UX
+- 📱 **Dark Theme**  
+  Add dark mode to enhance visual comfort and battery efficiency.
+
+- ♿ **Accessibility Improvements**  
+  Improve support for screen readers, contrast ratios, touch targets, and scalable fonts.
+
+---
+
+### ☁️ Architecture & Scalability
+- ☁️ **Cloud Backend Integration**  
+  Migrate from static data to Firebase or a dynamic backend for real-time updates.
+
+- 🧠 **Offline Mode**  
+  Cache data locally to support offline exploration and improve performance.
+
+---
+
 ## 👨‍💻 Author
 
 **Alan Gerónimo**  
