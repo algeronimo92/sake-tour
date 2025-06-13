@@ -50,6 +50,8 @@ You can explore the initial UI mockup on Figma here:
 
 > Follows Clean Architecture + Modularization for maintainability and testability.
 
+![image](https://github.com/user-attachments/assets/9badbb89-4f9c-41dc-b74d-102517183bea)
+
 ---
 
 ## 🧪 Testing
