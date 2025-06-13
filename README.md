@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/669b79c8-ae53-4136-a8cb-603be26b8f0b" width="600" alt="App Banner"/>
+  <img src="https://github.com/user-attachments/assets/13f2e804-48a6-4455-8030-ec6cfd4692dc" width="600" alt="App Banner"/>
 </p>
 
 # 🗺️ SakeTour — Explore the Best Sake Shops in Japan🍶
