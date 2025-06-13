@@ -91,3 +91,10 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(kotlin("test"))
 }
+
+tasks.withType<Test> {
+    testLogging {
+        events("passed", "skipped", "failed")
+        showStandardStreams = true
+    }
+}

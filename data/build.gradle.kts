@@ -46,3 +46,10 @@ dependencies {
     testImplementation(libs.mockito.core)
     implementation(libs.kotlinx.coroutines.core)
 }
+
+tasks.withType<Test> {
+    testLogging {
+        events("passed", "skipped", "failed")
+        showStandardStreams = true
+    }
+}
