@@ -84,7 +84,7 @@ You can explore the initial UI mockup on Figma here:
 
 1. Clone the repo
 ```bash
-git clone https://github.com/yourusername/SakeTour.git
+git clone https://github.com/algeronimo92/SakeTour.git
 ```
 
 2. Open in Android Studio (Giraffe or higher)
@@ -99,11 +99,13 @@ git clone https://github.com/yourusername/SakeTour.git
 ```bash
 ./gradlew testDebugUnitTest
 ```
+![image](https://github.com/user-attachments/assets/484c8056-e110-449a-9881-0c2155c6a80d)
 
 - Run ktlint check:
 ```bash
 ./gradlew ktlintCheck
 ```
+![image](https://github.com/user-attachments/assets/a601c3f7-4e60-4d36-bfe8-eb228a8e5b5c)
 
 - Run instrumentation tests:
 ```bash
