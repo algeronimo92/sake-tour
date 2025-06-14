@@ -1,3 +1,7 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.PASSED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.SKIPPED
+
 plugins {
     id("com.android.library")
     alias(libs.plugins.kotlin.android)
@@ -41,4 +45,11 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     debugImplementation(libs.androidx.ui.tooling)
+}
+
+tasks.withType<Test> {
+    testLogging {
+        events = setOf(PASSED, SKIPPED, FAILED)
+        showStandardStreams = true
+    }
 }
