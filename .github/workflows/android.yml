@@ -1,4 +1,4 @@
-name: Android Compile
+name: Android CI
 
 on:
   push:
