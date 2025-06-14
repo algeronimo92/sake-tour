@@ -1,16 +1,55 @@
-- name: Run unit tests with detailed output
-  run: |
-    ./gradlew \
-      :app:testDebugUnitTest \
-      :data:testDebugUnitTest \
-      :domain:testDebugUnitTest \
-      --info --stacktrace --console=plain
+name: Unit Tests
 
-- name: Upload test results for PR comment
-  uses: dorny/test-reporter@v1
-  if: always()
-  with:
-    name: Unit Tests
-    path: '**/build/test-results/testDebugUnitTest/*.xml'
-    reporter: java-junit
-    fail-on-error: false
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  unit-tests:
+    name: Run all unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Run unit tests with detailed output
+        run: |
+          ./gradlew \
+            :app:testDebugUnitTest \
+            :data:testDebugUnitTest \
+            :domain:testDebugUnitTest \
+            --info --stacktrace --console=plain
+
+      - name: Upload HTML test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-test-reports
+          path: |
+            app/build/reports/tests/testDebugUnitTest
+            data/build/reports/tests/testDebugUnitTest
+            domain/build/reports/tests/testDebugUnitTest
+
+      - name: Report test results in PR
+        if: always()
+        uses: dorny/test-reporter@v1
+        with:
+          name: Unit Tests
+          path: '**/build/test-results/testDebugUnitTest/*.xml'
+          reporter: java-junit
+          fail-on-error: false
