@@ -28,7 +28,7 @@ jobs:
           ./gradlew testDebugUnitTest \
             :data:testDebugUnitTest \
             :domain:testDebugUnitTest \
-            --info --stacktrace
+            --info --stacktrace --console=plain
 
       - name: Upload test reports
         if: always()
