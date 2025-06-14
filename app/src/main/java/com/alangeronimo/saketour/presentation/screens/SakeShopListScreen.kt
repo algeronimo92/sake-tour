@@ -43,6 +43,17 @@ fun SakeShopListScreen(
 }
 
 @Composable
+fun ListItem(
+    shop: SakeShop,
+    onClick: () -> Unit,
+) {
+    SakeListItem(
+        shop,
+        onClick = onClick,
+    )
+}
+
+@Composable
 private fun Content(
     viewModel: ISakeShopViewModel,
     onItemClick: (SakeShop) -> Unit,
@@ -73,15 +84,4 @@ private fun Content(
                 }
         }
     }
-}
-
-@Composable
-fun ListItem(
-    shop: SakeShop,
-    onClick: () -> Unit,
-) {
-    SakeListItem(
-        shop,
-        onClick = onClick,
-    )
 }
