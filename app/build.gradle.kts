@@ -98,7 +98,7 @@ dependencies {
 
 tasks.withType<Test> {
     testLogging {
-        events("passed", "skipped", "failed")
+        events(PASSED, SKIPPED, FAILED)
         showStandardStreams = true
     }
 }
