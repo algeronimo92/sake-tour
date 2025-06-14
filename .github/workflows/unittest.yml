@@ -6,7 +6,7 @@ on:
 
 jobs:
   unit-tests:
-    name: Run all module unit tests
+    name: Run all unit tests with report
     runs-on: ubuntu-latest
 
     steps:
@@ -23,12 +23,12 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Run unit tests in all modules with detailed logs
+      - name: Run unit tests with detailed output
         run: |
-          ./gradlew :app:testDebugUnitTest \
-                    :data:testDebugUnitTest \
-                    :domain:testDebugUnitTest \
-                    --no-parallel --info --stacktrace
+          ./gradlew testDebugUnitTest \
+            :data:testDebugUnitTest \
+            :domain:testDebugUnitTest \
+            --info --stacktrace
 
       - name: Upload test reports
         if: always()
