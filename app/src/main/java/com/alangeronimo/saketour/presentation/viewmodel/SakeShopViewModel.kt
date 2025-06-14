@@ -17,7 +17,6 @@ class SakeShopViewModel(private val getSakeShopsUseCase: GetSakeShopsUseCase) :
     override val state: StateFlow<SakeUiState> = _state
 
     init {
-        processEvent(SakeUiEvent.LoadShops)
         loadSakeShops()
     }
 
